@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: DanceCam is a project that aims to mitigate the effects of atmospheric turbulence in astronomical images using a combination of machine learning and high frame video streams of the sky.
+subtitle: DanceCam is a project that aims to mitigate the effects of atmospheric turbulence in astronomical images using a combination of machine learning and high frame-rate video streams of the sky.
 
 # profile:
 #   align: right
