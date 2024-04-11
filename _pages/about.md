@@ -4,20 +4,20 @@ title: about
 permalink: /
 subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
 
-profile:
-  align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: 
+# profile:
+#   align: right
+#   image: prof_pic.jpg
+#   image_circular: false # crops the image to make it circular
+#   more_info: 
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-# Include an M92 video from the assets folder
+<!-- Include an M92 video from the assets folder -->
 <video width="100%" controls>
-  <source src="/assets/videos/m92.mp4" type="video/mp4">
+  <source src="../assets/video/test_M92.mp4" type="video/mp4">
 </video>
 
 
