@@ -13,7 +13,13 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 ---
 
-## Benefits of video imaging over conventional long exposures
+### Video imaging offers many advantages over conventional long exposures:
+
+### ![image](./assets/img/magnifier.png){: style="display:inline; height:24pt"} Image quality
+
+* Transient artifacts such as cosmic ray hits and [satellite trails](https://en.wikipedia.org/wiki/Satellite_flare) can easily be removed
+
+* The blurring effects of the atmosphere can be mitigated using either [Lucky imaging](https://en.wikipedia.org/wiki/Lucky_imaging) or more advanced image reconstruction techniques
 
 ### ![image](./assets/img/snail.png){: style="display:inline; height:24pt"} Efficiency
 
@@ -29,11 +35,6 @@ social: false # includes social icons at the bottom of the page
 
 * Photometric and seeing can be monitored in real time 
 
-### ![image](./assets/img/magnifier.png){: style="display:inline; height:24pt"} Image quality
-
-* Transient artifacts such as cosmic ray hits and satellite trails can easily be removed
-
-* The blurring effects of the atmosphere can be mitigated using either [Lucky imaging](https://en.wikipedia.org/wiki/Lucky_imaging) or more advanced image reconstruction techniques
 
 #### Here is an example of DanceCam working on a real video stream of the central core of M92
 <!-- Include an M92 video from the assets folder -->
