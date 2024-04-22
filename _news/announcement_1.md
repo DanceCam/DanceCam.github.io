@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-The first DanceCam paper was accepted for publication in MNRAS!
+Our first DanceCam paper about AI-based mitigation of atmospheric blurring was accepted for publication in MNRAS!

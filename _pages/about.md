@@ -2,17 +2,27 @@
 layout: about
 title: about
 permalink: /
-subtitle: DanceCam is a project that aims to mitigate the effects of atmospheric turbulence in astronomical images using a combination of machine learning and high frame-rate video streams of the deep sky.
+subtitle: The DanceCam initiative aims at improving astronomical wide-field imaging from the ground, using a combination of machine learning and high resolution video streams of the deep sky.
 
-# profile:
-#   align: right
-#   image: prof_pic.jpg
-#   image_circular: false # crops the image to make it circular
-#   more_info: 
+Video imaging offers many advantages over conventional imaging employing long exposures:
+* Readout time is negligible
+* Physical shutters, guiders, or de-rotators are not required
+* Sidereal and non-sidereal guiding can be performed simultaneously using digital stacking
+
+
+* Photometric and seeing can be monitored in real time 
+* Transient artifacts such as cosmic ray hits and satellite trails can easily be removed
+* The blurring effects of the atmosphere can be mitigated using either Lucky imaging](https://en.wikipedia.org/wiki/Lucky_imaging) or more advanced image reconstruction techniques
+
+profile:
+   align: right
+   image: prof_pic.jpg
+   image_circular: false # crops the image to make it circular
+   more_info: 
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+social: false # includes social icons at the bottom of the page
 ---
 
 #### Here is an example of DanceCam working on a real video stream of the central core of M92
