@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://DanceCam.github.io/sitemap.xml
+Sitemap: https://dancecam.github.io/sitemap.xml
