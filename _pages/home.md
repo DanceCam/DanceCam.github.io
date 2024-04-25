@@ -1,17 +1,29 @@
 ---
 layout: home
 permalink: /
-subtitle: The DanceCam initiative aims at improving astronomical wide-field imaging from the ground, using a combination of machine learning and high resolution video streams of the deep sky.
 
 profile:
    align: left
    image: dancecam_logo.png
    more_info: 
 
-news: true # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
+news: false # includes a list of news items
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 ---
+
+<h1 style="text-align: center;">Atmospheric turbulence mitigation in wide-field astronomical images with short-exposure video streams</h1>
+
+### [Spencer Bialek](mailto:sbialek@uvic.ca)<sup>1,2</sup>, Emmanuel Bertin<a href="https://orcid.org/0000-0002-3602-3664"><sup> <img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" class="orcid" alt="ORCID iD icon"/></sup></a> <sup>2,3</sup>, Sébastien Fabbro<a href="https://orcid.org/0000-0003-2239-7988"><sup> <img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" class="orcid" alt="ORCID iD icon"/> </sup></a><sup>1,4</sup>, Hervé Bouy<a href="https://orcid.org/0000-0002-7084-487X"><sup> <img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" class="orcid" alt="ORCID iD icon"/></sup></a> <sup>5,6</sup>, Jean-Pierre Rivet<a href="https://orcid.org/0000-0002-0289-5851"><sup> <img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" class="orcid" alt="ORCID iD icon"/></sup></a> <sup>7</sup>, Olivier Lai<a href="https://orcid.org/0000-0001-5656-7346"><sup> <img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" class="orcid" alt="ORCID iD icon"/></sup></a> <sup>7</sup>, Jean-Charles Cuillandre<a href="https://orcid.org/0000-0002-3263-8645"><sup> <img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" class="orcid" alt="ORCID iD icon"/></sup></a> <sup>3</sup>
+
+<br/>
+<sup>1</sup>Department of Physics and Astronomy, University of Victoria, Victoria, BC, V8W 3P2, Canada<br/>
+<sup>2</sup>Canada–France–Hawaii Telescope, Kamuela, HI 96743, USA<br/>
+<sup>3</sup>AIM, CEA, CNRS, Université Paris-Saclay, Université Paris Cité, F-91191 Gif-sur-Yvette, France<br/>
+<sup>4</sup>National Research Council Herzberg Astronomy and Astrophysics, Victoria, BC, Canada<br/>
+<sup>5</sup>Laboratoire d’Astrophysique de Bordeaux, CNRS and Université de Bordeaux, Allée Geoffroy St. Hilaire, 33165 Pessac, France<br/>
+<sup>6</sup>Institut Universitaire de France<br/>
+<sup>7</sup>Université Côte d’Azur, Observatoire de la Côte d’Azur, CNRS, Laboratoire J.–L. Lagrange, F-06304 Nice Cedex 4, France<br/>
 
 #### Here is an example of DanceCam working on a real video stream of the central core of M92
 <!-- Include an M92 video from the assets folder -->
