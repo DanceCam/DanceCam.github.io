@@ -26,7 +26,14 @@ social: false # includes social icons at the bottom of the page
 <sup>7</sup>Université Côte d’Azur, Observatoire de la Côte d’Azur, CNRS, Laboratoire J.–L. Lagrange, F-06304 Nice Cedex 4, France<br/>
 </p>
 
-<div style="margin-left: auto; margin-right:auto; margin-top: 2em; max-width: 800px"><p style="font-style: italic; text-align: justify;">We introduce a novel technique to mitigate the adverse effects of atmospheric turbulence on
+<video autoplay="true" loop width="100%">
+  <source src="{{ site.baseurl }}/assets/video/test_M92.mp4" type="video/mp4">
+</video>
+
+
+<div style="margin-left: auto; margin-right:auto; margin-top: 2em; max-width: 800px">
+<h3 style="text-align: center;">Abstract</h3>
+<p style="font-style: italic; text-align: justify;">We introduce a novel technique to mitigate the adverse effects of atmospheric turbulence on
 astronomical imaging. Utilizing a video-to-image neural network trained on simulated data,
 our method processes a sliding sequence of short-exposure (∼0.2s) stellar field images to
 reconstruct an image devoid of both turbulence and noise. We demonstrate the method with
@@ -35,7 +42,8 @@ network to accurately associate speckles to their originating stars and effectiv
 light from adjacent sources across a range of seeing conditions, all while preserving flux
 to a lower signal-to-noise ratio than an average stack. This approach results in a marked
 improvement in angular resolution without compromising the astrometric stability of the final
-image.</p></div>
+image.</p>
+</div>
 
 ### The problem
 
