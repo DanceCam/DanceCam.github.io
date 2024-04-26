@@ -26,7 +26,7 @@ social: false # includes social icons at the bottom of the page
 <sup>7</sup>Université Côte d’Azur, Observatoire de la Côte d’Azur, CNRS, Laboratoire J.–L. Lagrange, F-06304 Nice Cedex 4, France<br/>
 </p>
 
-<video autoplay="true" loop width="100%">
+<video autoplay controls loop width="100%">
   <source src="{{ site.baseurl }}/assets/video/test_M92.mp4" type="video/mp4">
 </video>
 
@@ -48,16 +48,22 @@ image.</p>
 ### The problem
 
 Atmospheric turbulence causes the wavefront of incoming light to be dynamically distorted.
-Short-exposure astronomical images reveal the starlight to be composed of speckles with randomly varying shapes and positions around a central point.
 As a result, long exposures taken from ground instruments lead to the degradation of images and the overall effect can be framed as a blurring operation.
-With small telescopes (aperture ≈ 3 − 4 times the [Fried parameter](https://en.wikipedia.org/wiki/Fried_parameter)), the tilt component of the wavefront distortions outweighs the sum of all other contributions, and point sources feature a dominant speckle which can be used to track and compensate for random image motions on the focal plane.
+With small telescopes (aperture ≈ 3 − 4 times the [Fried parameter](https://en.wikipedia.org/wiki/Fried_parameter)), the tilt component of the wavefront distortions outweighs the sum of all other contributions, and the effect of turbulence is prominently random image motions on the focal plane.
 
-<!-- Include an M92 video from the assets folder -->
-<video autoplay="true" loop width="100%">
+<video autoplay controls loop width="100%" style="margin-bottom: 0rem;">
   <source src="{{ site.baseurl }}/assets/video/tycho.mp4" type="video/mp4">
 </video>
+<div class="caption">
+    Example of a video sequence at 20 frames per second, showing the dynamical effects of atmospheric turbulence on astronomical observations carried out from the ground on a small telescope (14"). The Moon crater close the center is Tycho. The pixel scale is 0.29".
+</div>
+<img src="{{ site.baseurl }}/assets/img/tycho_average.gif" width="100%" style="margin-bottom: -0.7rem; max-width:none !important;"/>
+<div class="caption">
+    3 second average of the video above, showing the blurring effect of long exposures.
+</div>
 
-<img src="{{ site.baseurl }}/assets/img/tycho_average.gif" width="100%" style="max-width:none !important;"/>
+When it comes to deep sky observations, correcting apparent motions over a wide field-of-view requires adjusting a “rubber” focal plane model ([Kaiser et al. 2000](https://ui.adsabs.harvard.edu/abs/2000PASP..112..768K/abstract)), which consists of a distorted virtual pixel grid whose deformations are continuously controlled by a number of guide stars over its surface.
+
 
 ### The method
 
