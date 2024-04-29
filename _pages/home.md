@@ -51,7 +51,7 @@ Atmospheric turbulence causes the wavefront of incoming light to be dynamically 
 As a result, long exposures taken from ground instruments lead to the degradation of images and the overall effect can be framed as a blurring operation.
 With small telescopes (aperture ≈ 3 − 4 times the [Fried parameter](https://en.wikipedia.org/wiki/Fried_parameter)), the tilt component of the wavefront distortions outweighs the sum of all other contributions, and the effect of turbulence is prominently random image motions on the focal plane.
 
-<video autoplay controls loop width="100%" style="margin-bottom: 0rem;">
+<video autoplay controls loop width="100%" style="margin-bottom: 0rem;margin-top: 2rem;">
   <source src="{{ site.baseurl }}/assets/video/tycho.mp4" type="video/mp4">
 </video>
 <div class="caption">
@@ -62,11 +62,25 @@ With small telescopes (aperture ≈ 3 − 4 times the [Fried parameter](https://
     3 second average of the video above, showing the blurring effect of long exposures.
 </div>
 
-When it comes to deep sky observations, correcting apparent motions over a wide field-of-view requires adjusting a “rubber” focal plane model ([Kaiser et al. 2000](https://ui.adsabs.harvard.edu/abs/2000PASP..112..768K/abstract)), which consists of a distorted virtual pixel grid whose deformations are continuously controlled by a number of guide stars over its surface.
+As the video above shows, fast imaging provides much sharper images than long exposures, but the high-resolution information is scrambled by turbulence.
+To compensate the effects of atmospheric turbulence over wide fields, one could imagine correcting those apparent motions by adjusting a “rubber” focal plane model ([Kaiser et al. 2000](https://ui.adsabs.harvard.edu/abs/2000PASP..112..768K/abstract)), which consists of a distorted virtual pixel grid.
 
+For deep sky observations, which are our primary goal, the deformations of this virtual grid would have to be continuously controlled by a number of guide stars over its surface.
+However this process is complex to set up in practice, e.g., changing conditions require dynamic adaptation of the statistical model, and the number of individual stars suitable for guiding is often insufficient.
+Instead, we propose to leverage the power of Deep Learning to directly reconstruct virtual exposures from video sequences.
 
 ### The method
 
+The cornerstone of our proposed method is the application of the Residual U-Net, a variant of the traditional U-Net architecture
+known for its proficiency in semantic segmentation and image reconstruction tasks.
+A set of simulated short-exposure video streams of stellar fields – with turbulence and noise – along with their corresponding ground truth frames – with no turbulence or noise – is used to train the model.
+Instead of a single output, the model additionally has outputs from each stage in the decoder which are compared to downsampled versions of the ground truth using a weighted mean-squared error (MSE) loss function.
+Once trained, either a simulated or real video stream can be used as input and only a single (not downsampled) inferred image is retrieved.
 
+<img class="repo-img-light" src="{{ site.baseurl }}/assets/img/dancecam_unet.png" width="100%" style="margin-bottom: -0.7rem; ;margin-top: 2rem; max-width:none !important;"/>
+<img class="repo-img-dark" src="{{ site.baseurl }}/assets/img/dancecam_unet-dark.png" width="100%" style="margin-bottom: -0.7rem; ;margin-top: 2rem; max-width:none !important;"/>
+<div class="caption">
+    The DanceCam Residual U-Net architecture.
+</div>
 
 
