@@ -27,7 +27,7 @@ social: false # includes social icons at the bottom of the page
 </p>
 
 <video autoplay controls loop width="100%">
-  <source src="{{ site.baseurl }}/assets/video/test_M92.mp4" type="video/mp4">
+  <source src="{{ site.baseurl }}/assets/video/test_M92.mp4" type="video/mp4" />
 </video>
 
 
@@ -52,7 +52,7 @@ As a result, long exposures taken from ground instruments lead to the degradatio
 With small telescopes (aperture ≈ 3 − 4 times the [Fried parameter](https://en.wikipedia.org/wiki/Fried_parameter)), the tilt component of the wavefront distortions outweighs the sum of all other contributions, and the effect of turbulence is prominently random image motions on the focal plane.
 
 <video autoplay controls loop width="100%" style="margin-bottom: 0rem;margin-top: 2rem;">
-  <source src="{{ site.baseurl }}/assets/video/tycho.mp4" type="video/mp4">
+  <source src="{{ site.baseurl }}/assets/video/tycho.mp4" type="video/mp4" />
 </video>
 <div class="caption">
     Example of a video sequence at 20 frames per second, showing the dynamical effects of atmospheric turbulence on astronomical observations carried out from the ground on a small telescope (14"). The Moon crater close the center is Tycho. The pixel scale is 0.29".
