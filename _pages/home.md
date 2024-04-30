@@ -71,16 +71,38 @@ Instead, we propose to leverage the power of Deep Learning to directly reconstru
 
 ### The method
 
-The cornerstone of our proposed method is the application of the Residual U-Net, a variant of the traditional U-Net architecture
+The cornerstone of our proposed method is the application of the Residual U-Net, a variant of the traditional U-Net neural network architecture
 known for its proficiency in semantic segmentation and image reconstruction tasks.
 A set of simulated short-exposure video streams of stellar fields – with turbulence and noise – along with their corresponding ground truth frames – with no turbulence or noise – is used to train the model.
 Instead of a single output, the model additionally has outputs from each stage in the decoder which are compared to downsampled versions of the ground truth using a weighted mean-squared error (MSE) loss function.
 Once trained, either a simulated or real video stream can be used as input and only a single (not downsampled) inferred image is retrieved.
 
-<img class="repo-img-light" src="{{ site.baseurl }}/assets/img/dancecam_unet.png" width="100%" style="margin-bottom: -0.7rem; ;margin-top: 2rem; max-width:none !important;"/>
-<img class="repo-img-dark" src="{{ site.baseurl }}/assets/img/dancecam_unet-dark.png" width="100%" style="margin-bottom: -0.7rem; ;margin-top: 2rem; max-width:none !important;"/>
+<img class="repo-img-light img-full" src="{{ site.baseurl }}/assets/img/dancecam_unet.png" width="100%"/>
+<img class="repo-img-dark img-full" src="{{ site.baseurl }}/assets/img/dancecam_unet-dark.png" width="100%"/>
 <div class="caption">
     The DanceCam Residual U-Net architecture.
 </div>
 
+<div class="img-right">
+  <img class="repo-img-light" src="{{ site.baseurl }}/assets/img/phasescreenlayers.png" width="100%"/>
+  <img class="repo-img-dark" src="{{ site.baseurl }}/assets/img/phasescreenlayers-dark.png" width="100%"/>
+  <div class="caption">
+    An example of the phase screens used in the simulation pipeline.
+  </div>
+</div>
+Training of the neural network is done purely on image simulations.
+We decompose the atmosphere into discrete layers which perturb the wavefront of the light from each star as it passes through.
+The entire simulation pipeline is written with PyTorch so that GPUs could be maximally utilized with Fast Fourier Transforms.
+This results in the capability to render ∼150,000 PSFs per second, which is a couple orders of magnitude faster than other similar implementations.
+
+We generated a training dataset containing 40,000 12-second video sequences; 12 seconds was chosen as a compromise between GPU memory constraints and collecting enough information about the turbulence and faint stars.
+Each frame matches the properties of the wide-field camera at the C2PU Omicron Telescope.
+Along with each video sequence, we generated the corresponding ground truth frame in which we disabled contributions from the atmosphere and any sources of noise in our simulation pipeline.
+
+<video autoplay controls loop width="100%" style="margin-bottom: 0rem;margin-top: 2rem;">
+  <source src="{{ site.baseurl }}/assets/video/tycho_sim.mp4" type="video/mp4" />
+</video>
+<div class="caption">
+    Example of a simulated video sequence of a deep star field observed under conditions roughly comparable to those of the Moon above.
+</div>
 
