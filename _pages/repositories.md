@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /repositories/
-title: Github informatiom for some of the people and projects involved with DanceCam
+title: repositories
 description: 
 nav: true
 nav_order: 4
