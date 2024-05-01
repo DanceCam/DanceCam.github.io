@@ -2,27 +2,37 @@
 layout: profiles
 permalink: /people/
 title: people
-description: members of the lab or group
+description: Members of the group
 nav: true
 nav_order: 7
 
 profiles:
-  # if you want to include more than one profile, just replicate the following block
-  # and create one content file for each profile inside _pages/
-  - align: right
-    image: prof_pic.jpg
-    content: about_einstein.md
-    image_circular: false # crops the image to make it circular
+  - image: spencerbialek.jpeg
+    image_circular: true
     more_info: >
-      <p>555 your office number</p>
-      <p>123 your address street</p>
-      <p>Your City, State 12345</p>
-  - align: left
-    image: prof_pic.jpg
-    content: about_einstein.md
-    image_circular: false # crops the image to make it circular
-    more_info: >
-      <p>555 your office number</p>
-      <p>123 your address street</p>
-      <p>Your City, State 12345</p>
+      <p>Spencer Bialek, PhD</p>
+      <p>Website: <a href="https://spiffical.github.io/">spiffical.github.io</a></p>
+      <p>Email: spencer.bialek@gmail.com</p>
+
+  # - image: jane_doe.jpg
+  #   image_circular: true
+  #   more_info: >
+  #     <p>Jane Doe</p>
+  #     <p>Senior Scientist</p>
+  #     <p>Email: jane.doe@example.com</p>
+
+  # - image: alex_smith.jpg
+  #   image_circular: false
+  #   more_info: >
+  #     <p>Alex Smith</p>
+  #     <p>Lab Technician</p>
+  #     <p>Email: alex.smith@example.com</p>
+
+  # - image: emma_brown.jpg
+  #   image_circular: true
+  #   more_info: >
+  #     <p>Emma Brown</p>
+  #     <p>Data Analyst</p>
+  #     <p>Email: emma.brown@example.com</p>
 ---
+
