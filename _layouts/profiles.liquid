@@ -10,14 +10,15 @@ layout: page
             {% if profile.image %}
               {% assign profile_image_path = profile.image | prepend: 'assets/img/' %}
               {% if profile.image_circular %}
-                {% assign profile_image_class = 'img-fluid rounded-circle' %}
+                {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
               {% else %}
-                {% assign profile_image_class = 'img-fluid rounded' %}
+                {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
               {% endif %}
-              <img src="{{ profile_image_path }}" class="{{ profile_image_class }}" alt="Profile image" style="width: 100%; max-width: 200px; height: auto;">
+              {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw{% endcapture %}
+              {% include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile.image %}
             {% endif %}
             {% if profile.more_info %}
-              <div class="profile-info">{{ profile.more_info | markdownify }}</div>
+              <div class="profile-info">{{ profile.more_info }}</div>
             {% endif %}
           </div>
         {% endfor %}
@@ -29,7 +30,7 @@ layout: page
 <style>
 .profile-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
   padding: 20px;
 }
@@ -37,12 +38,8 @@ layout: page
   text-align: center;
 }
 .profile-card img {
-  max-width: 200px;
-  max-height: 200px;
-  width: auto;
+  max-width: 100%;
   height: auto;
-  border-radius: 50%; /* Ensures circular appearance when circular option is true */
 }
 </style>
-
 
