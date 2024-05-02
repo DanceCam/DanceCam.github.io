@@ -83,21 +83,19 @@ Once trained, either a simulated or real video stream can be used as input and o
     The DanceCam Residual U-Net architecture.
 </div>
 
-<div class="img-right">
-  <img class="repo-img-light" src="{{ site.baseurl }}/assets/img/phasescreenlayers.png" width="100%"/>
-  <img class="repo-img-dark" src="{{ site.baseurl }}/assets/img/phasescreenlayers-dark.png" width="100%"/>
-  <div class="caption">
-    An example of the phase screens used in the simulation pipeline.
+<div class="content-section">
+  <div class="text-content">
+    <p>Training of the neural network is done purely on image simulations. We decompose the atmosphere into discrete layers which perturb the wavefront of the light from each star as it passes through. The entire simulation pipeline is written with PyTorch so that GPUs could be maximally utilized with Fast Fourier Transforms. This results in the capability to render ∼150,000 PSFs per second, which is a couple orders of magnitude faster than other similar implementations.</p>
+    <p>We generated a training dataset containing 40,000 12-second video sequences; 12 seconds was chosen as a compromise between GPU memory constraints and collecting enough information about the turbulence and faint stars. Each frame matches the properties of the wide-field camera at the C2PU Omicron Telescope. Along with each video sequence, we generated the corresponding ground truth frame in which we disabled contributions from the atmosphere and any sources of noise in our simulation pipeline.</p>
+  </div>
+  <div class="img-right">
+    <img class="repo-img-light" src="{{ site.baseurl }}/assets/img/phasescreenlayers.png" style="width:75%;"/>
+    <img class="repo-img-dark" src="{{ site.baseurl }}/assets/img/phasescreenlayers-dark.png" style="width:75%;"/>
+    <div class="caption">
+      An example of the phase screens used in the simulation pipeline.
+    </div>
   </div>
 </div>
-Training of the neural network is done purely on image simulations.
-We decompose the atmosphere into discrete layers which perturb the wavefront of the light from each star as it passes through.
-The entire simulation pipeline is written with PyTorch so that GPUs could be maximally utilized with Fast Fourier Transforms.
-This results in the capability to render ∼150,000 PSFs per second, which is a couple orders of magnitude faster than other similar implementations.
-
-We generated a training dataset containing 40,000 12-second video sequences; 12 seconds was chosen as a compromise between GPU memory constraints and collecting enough information about the turbulence and faint stars.
-Each frame matches the properties of the wide-field camera at the C2PU Omicron Telescope.
-Along with each video sequence, we generated the corresponding ground truth frame in which we disabled contributions from the atmosphere and any sources of noise in our simulation pipeline.
 
 <video autoplay controls loop width="100%" style="margin-bottom: 0rem;margin-top: 2rem;">
   <source src="{{ site.baseurl }}/assets/video/tycho_sim.mp4" type="video/mp4" />

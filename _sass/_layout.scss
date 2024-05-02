@@ -77,3 +77,44 @@ body.sticky-bottom-footer {
 *****************************************************************************/
 
 // TODO: redefine projects layout.
+
+.content-section {
+  display: flex;
+  justify-content: center; /* Keeps children centered horizontally */
+  align-items: center; /* Aligns children vertically */
+  margin: auto; /* Center the content-section horizontally */
+  max-width: 1200px; /* Limits the maximum width */
+}
+
+.text-content, .img-right {
+  flex: 1; /* Each takes equal space */
+  padding: 20px; /* Adds spacing around each section */
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically centers content within */
+  text-align: left; /* Keeps text left-aligned */
+}
+
+.img-right {
+  display: flex;
+  flex-direction: column; /* Organizes the image and the caption in a vertical stack */
+  align-items: center; /* Aligns the image and caption centrally within the column */
+  padding-right: 40px; /* Adds padding to the right for space from the center */
+}
+
+.img-right img {
+  width: 100%; /* Full width of its container to maintain responsiveness */
+  height: auto; /* Keeps the aspect ratio intact */
+}
+
+.caption {
+  text-align: center; /* Centers caption text */
+  padding-top: 10px; /* Optional: Adds some space between the image and caption */
+  width: auto; /* Ensures the caption width matches the image width if needed */
+  max-width: calc(100% - 80px); /* Adjusts max-width if padding affects alignment */
+}
+
+
