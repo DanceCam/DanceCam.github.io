@@ -12,7 +12,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 ---
 
-<h1 style="text-align: center;">Atmospheric turbulence mitigation in wide-field astronomical images with short-exposure video streams</h1>
+<h1 style="text-align: center; margin-top: 2rem;">Atmospheric turbulence mitigation in wide-field astronomical images with short-exposure video streams</h1>
 
 #### [Spencer Bialek](mailto:sbialek@uvic.ca)<a href="https://orcid.org/0009-0007-4388-2508"><sup> <img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" class="orcid" alt="ORCID iD icon"/></sup></a> <sup>1,2</sup>, Emmanuel Bertin<a href="https://orcid.org/0000-0002-3602-3664"><sup> <img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" class="orcid" alt="ORCID iD icon"/></sup></a> <sup>2,3</sup>, Sébastien Fabbro<a href="https://orcid.org/0000-0003-2239-7988"><sup> <img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" class="orcid" alt="ORCID iD icon"/> </sup></a><sup>1,4</sup>, Hervé Bouy<a href="https://orcid.org/0000-0002-7084-487X"><sup> <img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" class="orcid" alt="ORCID iD icon"/></sup></a> <sup>5,6</sup>, Jean-Pierre Rivet<a href="https://orcid.org/0000-0002-0289-5851"><sup> <img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" class="orcid" alt="ORCID iD icon"/></sup></a> <sup>7</sup>, Olivier Lai<a href="https://orcid.org/0000-0001-5656-7346"><sup> <img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" class="orcid" alt="ORCID iD icon"/></sup></a> <sup>7</sup>, Jean-Charles Cuillandre<a href="https://orcid.org/0000-0002-3263-8645"><sup> <img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" class="orcid" alt="ORCID iD icon"/></sup></a> <sup>3</sup>
 
@@ -25,6 +25,10 @@ social: false # includes social icons at the bottom of the page
 <sup>6</sup>Institut Universitaire de France<br/>
 <sup>7</sup>Université Côte d’Azur, Observatoire de la Côte d’Azur, CNRS, Laboratoire J.–L. Lagrange, F-06304 Nice Cedex 4, France<br/>
 </p>
+<div style="text-align:center;">
+  <a href="https://doi.org/10.1093/mnras/stae1018"><div class="bigbadge" style="margin: auto;"><img src="{{ site.baseurl }}/assets/img/icon-pdf.svg" width="30px" /> Full paper </div></a>
+  <a href="https://academic.oup.com/Citation/Download?resourceId=7654005&resourceType=3&citationFormat=2"><div class="bigbadge" style="margin: auto;"> BibTeX </div></a>
+</div>
 
 <div style="margin-left: auto; margin-right:auto; margin-top: 2em; max-width: 800px">
 <h3 style="text-align: center;">Abstract</h3>
