@@ -28,16 +28,10 @@ social: false # includes social icons at the bottom of the page
 
 <div style="margin-left: auto; margin-right:auto; margin-top: 2em; max-width: 800px">
 <h3 style="text-align: center;">Abstract</h3>
-<p style="font-style: italic; text-align: justify;">We introduce a novel technique to mitigate the adverse effects of atmospheric turbulence on
-astronomical imaging. Utilizing a video-to-image neural network trained on simulated data,
-our method processes a sliding sequence of short-exposure (∼0.2s) stellar field images to
-reconstruct an image devoid of both turbulence and noise. We demonstrate the method with
-simulated and observed stellar fields, and show that the brief exposure sequence allows the
-network to accurately associate speckles to their originating stars and effectively disentangle
-light from adjacent sources across a range of seeing conditions, all while preserving flux
-to a lower signal-to-noise ratio than an average stack. This approach results in a marked
-improvement in angular resolution without compromising the astrometric stability of the final
-image.</p>
+<p style="font-style: italic; text-align: justify;">We introduce a novel technique to mitigate the adverse effects of atmospheric turbulence on astronomical imaging. Utilizing a video-to-image neural network trained on simulated data, our method processes a sliding sequence of short-exposure (∼0.2s) stellar field images to
+reconstruct an image devoid of both turbulence and noise.
+We demonstrate the method with simulated and observed stellar fields, and show that the brief exposure sequence allows the network to accurately associate speckles to their originating stars and effectively disentangle light from adjacent sources across a range of <a href="https://en.wikipedia.org/wiki/Astronomical_seeing">seeing</a> conditions, all while preserving flux to a lower signal-to-noise ratio than an average stack.
+This approach results in a marked improvement in angular resolution without compromising the <a href="https://en.wikipedia.org/wiki/Astrometry">astrometric</a> stability of the final image.</p>
 </div>
 
 ### The problem
@@ -80,7 +74,7 @@ Once trained, either a simulated or real video stream can be used as input and o
 
 <div class="content-section">
   <div class="text-content">
-    <p>Training of the neural network is done purely on image simulations. We decompose the atmosphere into discrete layers which perturb the wavefront of the light from each star as it passes through. The entire simulation pipeline is written with PyTorch so that GPUs could be maximally utilized with Fast Fourier Transforms. This results in the capability to render ∼150,000 PSFs per second, which is a couple orders of magnitude faster than other similar implementations.</p>
+    <p>Training of the neural network is done purely on image simulations. We decompose the atmosphere into discrete layers which perturb the wavefront of the light from each star as it passes through. The entire simulation pipeline is written with <a href="https://pytorch.org">PyTorch</a> so that GPUs could be maximally utilized with Fast Fourier Transforms. This results in the capability to render ∼150,000 point sources per second, which is a couple orders of magnitude faster than other similar implementations.</p>
     <p>We generated training datasets containing 40,000 6- and 12-second video sequences; 12 seconds was eventually chosen as a compromise between GPU memory constraints and collecting enough information about the turbulence and faint stars. Each frame matches the properties of the wide-field camera at the C2PU Omicron Telescope. Along with each video sequence, we generated the corresponding ground truth frame in which we disabled contributions from the atmosphere and any sources of noise in our simulation pipeline.</p>
   </div>
   <div class="img-right">
@@ -121,7 +115,7 @@ Hundreds of 30-second simulated observations of random stellar fields, with vary
 <img class="repo-img-light img-full" src="{{ site.baseurl }}/assets/img/sim_m92_measurements.png" width="100%"/>
 <img class="repo-img-dark img-full" src="{{ site.baseurl }}/assets/img/sim_m92_measurements-dark.png" width="100%"/>
 <div class="caption">
-  10-pixel aperture magnitudes (left panel), source sizes (defined as D50, the diameter of the circle within which 50% of the light from a star is contained, middle panel) and centroid coordinates (right panels).
+  10-pixel aperture <a href="https://en.wikipedia.org/wiki/Photometry_(astronomy)#Magnitudes_and_colour_indices">magnitudes</a> (left panel), source sizes (defined as D50, the diameter of the circle within which 50% of the light from a star is contained, middle panel) and centroid coordinates (right panels).
   Shown here are the residuals of those metrics for the inferred stack (orange disks) and simple averaged stack (blue triangles) when compared to the matching stars in the ground truth frames as a function of magnitude, along with their binned means and standard deviations (shown as error bars) – where the black and grey lines correspond to the inferred and averaged stack values, respectively.
   Also shown are the computed means for “bad seeing" and “good seeing" subsets of the data (> 1.2" and < 0.7", respectively).
 </div>
