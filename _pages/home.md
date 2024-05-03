@@ -27,7 +27,7 @@ social: false # includes social icons at the bottom of the page
 </p>
 <div style="text-align:center;">
   <a href="https://doi.org/10.1093/mnras/stae1018"><div class="bigbadge" style="margin: auto;"><img src="{{ site.baseurl }}/assets/img/icon-pdf.svg" width="30px" /> Full paper </div></a>
-  <a href="https://academic.oup.com/Citation/Download?resourceId=7654005&resourceType=3&citationFormat=2"><div class="bigbadge" style="margin: auto;"> BibTeX </div></a>
+  <a href="https://academic.oup.com/Citation/Download?resourceId=7654005&resourceType=3&citationFormat=2"><div class="bigbadge" style="margin: auto;"><img src="{{ site.baseurl }}/assets/img/icon-bibtex.svg" width="64px" /></div></a>
 </div>
 
 <div style="margin-left: auto; margin-right:auto; margin-top: 2em; max-width: 800px">
