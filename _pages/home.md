@@ -73,13 +73,13 @@ Once trained, either a simulated or real video stream can be used as input and o
 </div>
 
 <div class="content-section">
-  <div class="text-content">
+  <div class="text-content" style="padding:0rem;">
     <p>Training of the neural network is done purely on image simulations. We decompose the atmosphere into discrete layers which perturb the wavefront of the light from each star as it passes through. The entire simulation pipeline is written with <a href="https://pytorch.org">PyTorch</a> so that GPUs could be maximally utilized with Fast Fourier Transforms. This results in the capability to render ∼150,000 point sources per second, which is a couple orders of magnitude faster than other similar implementations.</p>
     <p>We generated training datasets containing 40,000 6- and 12-second video sequences; 12 seconds was eventually chosen as a compromise between GPU memory constraints and collecting enough information about the turbulence and faint stars. Each frame matches the properties of the wide-field camera at the C2PU Omicron Telescope. Along with each video sequence, we generated the corresponding ground truth frame in which we disabled contributions from the atmosphere and any sources of noise in our simulation pipeline.</p>
   </div>
-  <div class="img-right">
-    <img class="repo-img-light" src="{{ site.baseurl }}/assets/img/phasescreenlayers.png" style="max-width:67%;"/>
-    <img class="repo-img-dark" src="{{ site.baseurl }}/assets/img/phasescreenlayers-dark.png" style="max-width:67%;"/>
+  <div class="img-right" style="margin-left: 1rem; margin-right: 0rem; padding: 0rem;">
+    <img class="repo-img-light" src="{{ site.baseurl }}/assets/img/phasescreenlayers.png" data-zoomable style="max-width: 320px;"/>
+    <img class="repo-img-dark" src="{{ site.baseurl }}/assets/img/phasescreenlayers-dark.png" data-zoomable style="max-width: 320px;"/>
     <div class="caption">
       An example of the phase screens used in the simulation pipeline.
     </div>
