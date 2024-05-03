@@ -26,7 +26,6 @@ social: false # includes social icons at the bottom of the page
 <sup>7</sup>Université Côte d’Azur, Observatoire de la Côte d’Azur, CNRS, Laboratoire J.–L. Lagrange, F-06304 Nice Cedex 4, France<br/>
 </p>
 
-
 <div style="margin-left: auto; margin-right:auto; margin-top: 2em; max-width: 800px">
 <h3 style="text-align: center;">Abstract</h3>
 <p style="font-style: italic; text-align: justify;">We introduce a novel technique to mitigate the adverse effects of atmospheric turbulence on
@@ -47,7 +46,7 @@ Atmospheric turbulence causes the wavefront of incoming light to be dynamically 
 As a result, long exposures taken from ground instruments lead to the degradation of images and the overall effect can be framed as a blurring operation.
 With small telescopes (aperture ≈ 3 − 4 times the [Fried parameter](https://en.wikipedia.org/wiki/Fried_parameter)), the tilt component of the wavefront distortions outweighs the sum of all other contributions, and the effect of turbulence is prominently random image motions on the focal plane.
 
-<video autoplay controls loop width="100%" style="margin-bottom: 0rem;margin-top: 2rem;">
+<video autoplay controls loop width="100%" style="display:block; margin: 2rem auto 0rem auto;">
   <source src="{{ site.baseurl }}/assets/video/tycho.mp4" type="video/mp4" />
 </video>
 <div class="caption">
@@ -93,7 +92,7 @@ Once trained, either a simulated or real video stream can be used as input and o
   </div>
 </div>
 
-<video autoplay controls loop width="100%" style="margin-bottom: 0rem;margin-top: 2rem;">
+<video autoplay controls loop width="100%" style="display:block; margin: 2rem auto 0rem auto;">
   <source src="{{ site.baseurl }}/assets/video/tycho_sim.mp4" type="video/mp4" />
 </video>
 <div class="caption">
@@ -104,18 +103,16 @@ Once trained, either a simulated or real video stream can be used as input and o
 
 #### Synthetic data
 
-Visually, the proposed method does an excellent job at taking in a short sequence of turbulent images and producing a clear, sharp,
-noise- and turbulence-mitigated image.
+Visually, the proposed method does an excellent job at taking in a short sequence of turbulent images and producing clear, sharp, noise- and turbulence-mitigated images.
 
-<video autoplay controls loop width="100%" style="max-width: 1200px; margin-bottom: 0rem;margin-top: 2rem;">
-  <source src="{{ site.baseurl }}/assets/video/sim_results_07.mp4" type="video/mp4" />
+<video autoplay controls loop width="100%" style="max-width: 1200px; display:block; margin: 2rem auto 0rem auto;">
+  <source src="{{ site.baseurl }}/assets/video/videoexample12s_simrandomfield_0.7arcsec.mp4" type="video/mp4" />
 </video>
-<video autoplay controls loop width="100%" style="max-width: 1200px; margin-bottom: 0rem;">
-  <source src="{{ site.baseurl }}/assets/video/sim_results_14.mp4" type="video/mp4" />
+<video autoplay controls loop width="100%" style="max-width: 1200px; display:block; margin: 0.5rem auto 0rem auto;">
+  <source src="{{ site.baseurl }}/assets/video/videoexample12s_simrandomfield_1.4arcsec.mp4" type="video/mp4" />
 </video>
 <div class="caption">
-    Two examples highlighting the ability of the proposed method to remove the effects of atmospheric turbulence and produce a sharp, clear image.
-6-second sequences of random stellar fields were simulated with (top) 0.7" seeing and (bottom) 1.4" seeing, and, from left to right: the ground truth, the video sequence, the temporally averaged sequence, and the inferred frames.
+    Two examples highlighting the ability of the proposed method to remove the effects of atmospheric turbulence and produce a sharp, clear image. Sequences of random stellar fields were simulated with (top) 0.7" seeing and (bottom) 1.4" seeing, and, from left to right: the ground truth, the video sequence, the temporally averaged sequence, and the sequence of inferred frames.
 </div>
 
 A series of quality assurance tests were made to validate the image reconstructions made by the U-Net.
@@ -124,17 +121,38 @@ Hundreds of 30-second simulated observations of random stellar fields, with vary
 <img class="repo-img-light img-full" src="{{ site.baseurl }}/assets/img/sim_m92_measurements.png" width="100%"/>
 <img class="repo-img-dark img-full" src="{{ site.baseurl }}/assets/img/sim_m92_measurements-dark.png" width="100%"/>
 <div class="caption">
-
-  10-pixel aperture magnitudes (left panel), source sizes (defined as the diameter within which 50% of the light from a star is contained, middle panel) and centroid coordinates (right panels).
+  10-pixel aperture magnitudes (left panel), source sizes (defined as D50, the diameter of the circle within which 50% of the light from a star is contained, middle panel) and centroid coordinates (right panels).
   Shown here are the residuals of those metrics for the inferred stack (orange disks) and simple averaged stack (blue triangles) when compared to the matching stars in the ground truth frames as a function of magnitude, along with their binned means and standard deviations (shown as error bars) – where the black and grey lines correspond to the inferred and averaged stack values, respectively.
   Also shown are the computed means for “bad seeing" and “good seeing" subsets of the data (> 1.2" and < 0.7", respectively).
 </div>
 
 #### Real data
 
+We directly applied the neural network trained from synthetic data to real video sequences taken at the prime focus of the C2PU 1m "Omicron" telescope (Calern observatory, France) *without transfer learning or domain adaptation*.
+As the illustrations below show, the proposed method is directly applicable to real video sequences, and provides a marked improvement over regular image stacking, both qualitatively and quantitatively.
+The inferred frames exhibited a typical 2.5$$\times$$ reduction in D50 measurements, and more than 30% more stars are identified relative to the averaged frame.
 
-<video autoplay controls loop width="100%" style="max-width: 1200px; margin-bottom: 0rem;margin-top: 2rem;">
-  <source src="{{ site.baseurl }}/assets/video/test_M92.mp4" type="video/mp4" />
+<video autoplay controls loop width="100%" style="max-width: 1200px; display:block; margin: 2rem auto 0rem auto;">
+  <source src="{{ site.baseurl }}/assets/video/videoexample12s_M92.mp4" type="video/mp4" />
 </video>
+<div class="caption">
+  The C2PU telescope was used to obtain a video stream at 5.25 frames/sec of the globular cluster M92 in the red filter, which was decomposed into 256x256 video tiles of 12s and fetched into our neural network model.
+  From left to right: a single frame from the video (zoomed in), the video sequence, the temporally averaged sequence, and the sequence of inferred frames.
+  Note the intermittently turbulent ground layer that can cause all the stars in the field to move in lockstep by up to a couple arcseconds, an effect which is not currently accounted for in the simulations.
+</div>
+
+<img class="repo-img-light img-full" src="{{ site.baseurl }}/assets/img/real_m92_stats.png" width="100%" style="margin-top: 2rem; max-width: 800px; margin-left: auto; margin-right: auto"/>
+<img class="repo-img-dark img-full" src="{{ site.baseurl }}/assets/img/real_m92_stats-dark.png" width="100%" style="margin-top: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;"/>
+<div class="caption" style="max-width: 800px; margin-left: auto; margin-right: auto;">
+  Source sizes (D50, left panel) and stellar detection completeness (for stars from the Gaia DR3 catalog, at a 2% FPR, right panel) as a function of Gaia magnitude, for the real M92 observations.
+  The orange symbols are for a 30s stack derived of the inferred virtual exposures, while the blue symbols are for the simple averaged image stack.
+</div>
+
+## Conclusion
+
+Our method, trained on simulated observations, is adept at inferring a turbulence- and noise-free image from a sequence of short-exposure observations of a stellar field, effectively associating speckles with their source star and disentangling light from proximate sources, while conserving flux.
+However, it is important to acknowledge that further development and refinement are necessary for this approach, particularly in recovering fainter sources in low stellar density environments, improving astrometric precision, and reconstructing the images of extended objects such as galaxies.
+
+Checkout [the full paper](https://doi.org/10.1093/mnras/stae1018).
 
 
