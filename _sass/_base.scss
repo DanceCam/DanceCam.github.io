@@ -58,6 +58,7 @@ table.table a {
 figure,
 img {
   max-width: 90vw;
+  margin: 0;
 }
 
 blockquote {
@@ -163,7 +164,7 @@ ul.task-list input[type="checkbox"] {
 
 .card {
   background-color: var(--global-card-bg-color);
-
+  word-wrap: normal;
   img {
     width: 100%;
   }
@@ -623,6 +624,7 @@ footer.sticky-bottom {
   }
 
   .card {
+    height: 100%;
     img {
       width: 100%;
     }
@@ -630,11 +632,13 @@ footer.sticky-bottom {
 
   .card-item {
     width: auto;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 
     .row {
       display: flex;
       align-items: center;
+      margin-top: auto;
+      margin-bottom: auto;
     }
   }
 
