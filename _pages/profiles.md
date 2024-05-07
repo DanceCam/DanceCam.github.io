@@ -11,8 +11,52 @@ profiles:
     image_circular: true
     more_info: >
       <p>Spencer Bialek, PhD</p>
+      <p>University of Victoria, CFHT</p>
       <p>Website: <a href="https://spiffical.github.io/">spiffical.github.io</a></p>
       <p>Email: spencer.bialek@gmail.com</p>
+
+  - image: emmanuelbertin.jpg
+    image_circular: true
+    more_info: >
+      <p>Emmanuel Bertin</p>
+      <p>AIM/Irfu/DAp, Université Paris-Saclay, CFHT</p>
+      <p><a href="https://orcid.org/0000-0002-3602-3664">Website</a></p>
+
+  - image: sebastienfabbro.jpg
+    image_circular: true
+    more_info: >
+      <p>Sébastien Fabbro</p>
+      <p>University of Victoria</p>
+      <p><a href="https://www.uvic.ca/research/centres/arc/people/adjunct-members/fabbro-sebastien.php">Website</a></p>
+
+  - image: hervebouy.webp
+    image_circular: true
+    more_info: >
+      <p>Hervé Bouy</p>
+      <p>Université de Bordeaux</p>
+      <p><a href="https://perso.astrophy.u-bordeaux.fr/~hbouy/">Website</a></p>
+
+  - image: jeanpierrerivet.jpg
+    image_circular: true
+    more_info: >
+      <p>Jean-Pierre Rivet</p>
+      <p>Observatoire de la Côte d'Azur</p>
+      <p><a href="https://www.oca.eu/en/jean-pierre-rivet/1639-jean-pierre-rivet">Website</a></p>
+
+  - image: olivierlai.jpg
+    image_circular: true
+    more_info: >
+      <p>Olivier Lai</p>
+      <p>Observatoire de la Côte d'Azur</p>
+      <p><a href="https://univ-cotedazur.fr/olivier-lai">Website</a></p>
+
+  - image: jeancharlescuillandre.jpg
+    image_circular: true
+    more_info: >
+      <p>Jean-Charles Cuillandre</p>
+      <p>AIM/Irfu/DAp, Université Paris-Saclay</p>
+      <p><a href="https://www.cfht.hawaii.edu/~jcc/">Website</a></p>
+
 
   # - image: jane_doe.jpg
   #   image_circular: true

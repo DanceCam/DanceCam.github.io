@@ -32,6 +32,10 @@ body.sticky-bottom-footer {
   max-width: $max-content-width;
 }
 
+p {
+text-align: justify;
+}
+
 .img-full {
   margin-bottom: -0.5rem;
   margin-top: 2rem;
@@ -48,6 +52,26 @@ body.sticky-bottom-footer {
   float: right;
   margin-bottom: -0.5rem;
   max-width: 50%;
+  display: flex;
+  flex-direction: column; /* Organizes the image and the caption in a vertical stack */
+  align-items: center; /* Aligns the image and caption centrally within the column */
+  padding-right: 40px; /* Adds padding to the right for space from the center */
+}
+
+.img-right img {
+  width: 100%; /* Full width of its container to maintain responsiveness */
+  height: auto; /* Keeps the aspect ratio intact */
+}
+
+.caption {
+  text-align: center; /* Centers caption text */
+  padding-top: 10px; /* Optional: Adds some space between the image and caption */
+  width: auto; /* Ensures the caption width matches the image width if needed */
+//  max-width: calc(100% - 80px); /* Adjusts max-width if padding affects alignment */
+}
+
+.desc {
+  margin-top: 2rem;
 }
 
 
@@ -58,11 +82,36 @@ body.sticky-bottom-footer {
   }
 }
 
+// article
+article {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 // ORCiD 
 
 .orcid {
   width: 0.8em;
 }
+
+// Fun badge
+
+.bigbadge{
+  display: inline-block;
+  margin: 2rem 0.25rem 2rem 0.25rem !important;
+  padding: .25em .4em;
+  font-size: 125%;
+  font-weight: 500;
+  line-height: 2rem;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .5rem;
+  color: var(--global-text-color-light);
+  box-shadow: 2px 2px 5px rgb(0 0 0 / 33%);
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
 
 // TODO: redefine content layout.
 
@@ -96,25 +145,6 @@ body.sticky-bottom-footer {
   flex-direction: column;
   justify-content: center; /* Vertically centers content within */
   text-align: left; /* Keeps text left-aligned */
-}
-
-.img-right {
-  display: flex;
-  flex-direction: column; /* Organizes the image and the caption in a vertical stack */
-  align-items: center; /* Aligns the image and caption centrally within the column */
-  padding-right: 40px; /* Adds padding to the right for space from the center */
-}
-
-.img-right img {
-  width: 100%; /* Full width of its container to maintain responsiveness */
-  height: auto; /* Keeps the aspect ratio intact */
-}
-
-.caption {
-  text-align: center; /* Centers caption text */
-  padding-top: 10px; /* Optional: Adds some space between the image and caption */
-  width: auto; /* Ensures the caption width matches the image width if needed */
-  max-width: calc(100% - 80px); /* Adjusts max-width if padding affects alignment */
 }
 
 

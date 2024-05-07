@@ -1,11 +1,12 @@
 ---
 layout: page
-title: project 1
+title: Image quality
 description: a project with a background image
-img: assets/img/12.jpg
+img: assets/img/magnifier.png
 importance: 1
 category: work
 related_publications: true
+horizontal: false
 ---
 
 Every project has a beautiful feature showcase page.
