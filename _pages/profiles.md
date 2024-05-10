@@ -26,7 +26,7 @@ profiles:
     image_circular: true
     more_info: >
       <p>Sébastien Fabbro</p>
-      <p>University of Victoria</p>
+      <p>NRC Herzberg / University of Victoria</p>
       <p><a href="https://www.uvic.ca/research/centres/arc/people/adjunct-members/fabbro-sebastien.php">Website</a></p>
 
   - image: hervebouy.webp
