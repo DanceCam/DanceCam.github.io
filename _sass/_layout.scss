@@ -56,6 +56,7 @@ text-align: justify;
   flex-direction: column; /* Organizes the image and the caption in a vertical stack */
   align-items: center; /* Aligns the image and caption centrally within the column */
   padding-right: 40px; /* Adds padding to the right for space from the center */
+  min-width: 240px;
 }
 
 .img-right img {
@@ -129,6 +130,7 @@ article {
 
 .content-section {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center; /* Keeps children centered horizontally */
   align-items: center; /* Aligns children vertically */
   margin: auto; /* Center the content-section horizontally */
@@ -145,6 +147,7 @@ article {
   flex-direction: column;
   justify-content: center; /* Vertically centers content within */
   text-align: left; /* Keeps text left-aligned */
+  min-width: 320px;
 }
 
 
